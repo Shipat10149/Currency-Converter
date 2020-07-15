@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Currency converter</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+       <h1>Currency Converter</h1>
+
+
+       <marquee>welcome to the currency converter</marquee>
+
+       <h2>Select Currency</h2>
+
+
+       <div class="go">
+
+       	<select name="currency" id="inputCurrency" onchange="firstTosecond()" onclick="fixed()">
+       		
+         <option value="taka">Bangladeshi Taka</option>
+         <option value="rupee">Indian Rupee</option>
+         <option value="dollar">US Dollar</option>
+         <option value="dinar">Kuwaiti Dinar</option>
+
+       	</select>
+
+       	 <input oninput="firstTosecond()" onchange="firstTosecond()"  type="number" id="firstCurrency"  />
+       	 </div><br><br><br><br>
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+       	 <h2>Convert Currency</h2>
+
+
+       	 <div class="gone">
+
+       	  	<select name="currency" id="outputCurrency" onchange="firstTosecond()" onclick="alertbox()">
+       		
+         <option value="taka1">Bangladeshi Taka</option>
+         <option value="rupee1">Indian Rupee</option>
+         <option value="dollar1">US Dollar</option>
+         <option value="dinar1">Kuwaiti Dinar</option>
+
+       	</select>
+
+      <input  id="SecondCurrency"  />
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script type="text/javascript">
+
+
+
+
+
+      	function alertbox()
+      	{
+      		  if(document.getElementById("SecondCurrency").value==0)
+        {
+        	alert("Please input Currency");
+        }
+      	}
+
+
+
+
+      	
+
+function fixed()
+      	{
+      		  if(document.getElementById("inputCurrency").value=='taka' && document.getElementById("firstCurrency").value=='')
+        {
+        	document.getElementById("SecondCurrency").value='';
+        }
+
+         else if(document.getElementById("inputCurrency").value=='rupee' && document.getElementById("firstCurrency").value=='')
+        {
+        	document.getElementById("SecondCurrency").value='';
+        }
+
+
+        else if(document.getElementById("inputCurrency").value=='dollar' && document.getElementById("firstCurrency").value=='')
+        {
+        	document.getElementById("SecondCurrency").value='';
+        }
+
+
+        else if(document.getElementById("inputCurrency").value=='dinar' && document.getElementById("firstCurrency").value=='')
+        {
+        	document.getElementById("SecondCurrency").value='';
+        }
+
+
+      	}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+      	
+      function firstTosecond(){
+
+       var input1=document.getElementById("firstCurrency").value;
+       //var input2=document.getElementById("SecondCurrency").value;
+
+
+
+      
+
+
+
+       
+
+       if (document.getElementById("inputCurrency").value=='taka')
+
+       {
+         
+         if (document.getElementById("outputCurrency").value=='taka1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*1;
+         }
+
+
+         else if (document.getElementById("outputCurrency").value=='rupee1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*0.89;
+         }
+
+
+         else if (document.getElementById("outputCurrency").value=='dollar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*0.012;
+         }
+
+
+
+         else if (document.getElementById("outputCurrency").value=='dinar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*0.0036;
+         }
+
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       if (document.getElementById('inputCurrency').value=='rupee')
+
+       {
+
+         if (document.getElementById('outputCurrency').value=='taka1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*1.11;
+         }
+
+
+         else if (document.getElementById('outputCurrency').value=='rupee1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*1;
+         }
+
+
+         else if (document.getElementById('outputCurrency').value=='dollar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*0.013;
+         }
+
+
+
+         else if (document.getElementById('outputCurrency').value=='dinar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*0.0040;
+         }
+
+       }
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       if (document.getElementById('inputCurrency').value=='dollar')
+
+       {
+
+         if (document.getElementById('outputCurrency').value=='taka1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*84.91;
+         }
+
+
+         else if (document.getElementById('outputCurrency').value=='rupee1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*75.72;
+         }
+
+
+         else if (document.getElementById('outputCurrency').value=='dollar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*1;
+         }
+
+
+
+         else if (document.getElementById('outputCurrency').value=='dinar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*0.31;
+         }
+
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       if (document.getElementById('inputCurrency').value=='dinar')
+
+       {
+
+         if (document.getElementById('outputCurrency').value=='taka1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*275.78;
+         }
+
+
+         else if (document.getElementById('outputCurrency').value=='rupee1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*247.66;
+         }
+
+
+         else if (document.getElementById('outputCurrency').value=='dollar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*3.25;
+         }
+
+
+
+         else if (document.getElementById('outputCurrency').value=='dinar1')
+         {
+         	document.getElementById("SecondCurrency").value=input1*1;
+         }
+
+       }
+
+
+
+
+      }
+
+
+
+
+
+      </script>
+       
+  <br><br><br>  
+  <div class="went">	
+  <button>Reset</button></div> 
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+  	
+
+
+  	let btnClear=document.querySelector('button');
+  	let inputs=document.querySelectorAll('input');
+  	btnClear.addEventListener('click', ()=> 
+  	{
+  		inputs.forEach(input => input.value = '');
+  	})
+  </script>
+
+
+  
+
+
+   </header>   
+</body>
+</html>
